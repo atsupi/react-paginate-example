@@ -1,0 +1,13 @@
+
+.ItemsStyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-auto-columns: 600px;
+    grid-auto-rows: 150px;
+    column-gap: 10px;
+    row-gap: 1em;
+}
+
+.pagination {
+    list-style: none;
+}
