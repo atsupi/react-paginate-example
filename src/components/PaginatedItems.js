@@ -3,17 +3,21 @@ import ReactPaginate from 'react-paginate';
 import "./PaginateItems.css"
 
 // Example items, to simulate fetching from another resources.
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
 
 function Items({ currentItems }) {
+  let index = 0;
   return (
     <>
       {currentItems &&
-        currentItems.map((item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
-        ))}
+        currentItems.map((item) => {
+          index = index + 1;
+          return (
+            <div className={`Item${index}`}>
+              <h3>Item #{item}</h3>
+            </div>
+          )
+      })}
     </>
   );
 }
