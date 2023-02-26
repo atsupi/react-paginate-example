@@ -13,7 +13,7 @@ function Items({ currentItems }) {
         currentItems.map((item) => {
           index = index + 1;
           return (
-            <div className={`Item${index}`}>
+            <div className={`Item${index}`} key={`Item${index}`}>
               <h3>Item #{item}</h3>
             </div>
           )
@@ -47,7 +47,7 @@ export const PaginatedItems = ({ itemsPerPage }) => {
   return (
     <>
       <div className="PaginateWrapper">
-        <div class="ItemsStyle">
+        <div className="ItemsStyle">
           <Items currentItems={currentItems} />
         </div>
         <ReactPaginate
